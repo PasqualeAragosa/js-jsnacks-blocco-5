@@ -12,16 +12,18 @@ function mergeArray(array1, array2) {
     //     newArray.push(array2[i]);
     // }
 
-    array1.forEach(index => {
-        newArray.push(array1[index - 1]);
-        newArray.push(array2[index - 1]);
+    array1.forEach( (element, index) => {
+        newArray.push(array1[index]);
+        newArray.push(array2[index]);
     });
 
     return newArray;
 }
 
-const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 , 11, 12 , 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 , 26];
+const num = [1, 2, 3, 4, 5, 'Ciao sono pasquale', 7, 8, 9, 10 , 11, 12 , 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 , 26];
 const alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-const result = mergeArray(num, alpha);
+
+
+const result = mergeArray(alpha, num);
 
 console.log('New combine array: ', result);
