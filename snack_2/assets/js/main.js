@@ -68,30 +68,44 @@ function sumWeight(array) {
 }
 
 function getHigher(array) {
-    let newArray = [];
-
-    array.forEach(element => {
-        if (element.height >= 15) {
-            newArray.push(element);
-        }
-    });
+    let newArray = array.filter(element => element.height >= 15);
 
     //console.log('New array higher: ', newArray);
     return newArray;
 }
 
-function getLower(array) {
-    let newArray = [];
+// function getHigher(array) {
+//     let newArray = [];
 
-    array.forEach(element => {
-        if (element.height < 15) {
-            newArray.push(element);
-        }
-    });
+//     array.forEach(element => {
+//         if (element.height >= 15) {
+//             newArray.push(element);
+//         }
+//     });
+
+//     //console.log('New array higher: ', newArray);
+//     return newArray;
+// }
+
+function getLower(array) {
+    let newArray = array.filter(element => element.height < 15);
 
     //console.log('New array lower: ', newArray);
     return newArray;
 }
+
+// function getLower(array) {
+//     let newArray = [];
+
+//     array.forEach(element => {
+//         if (element.height < 15) {
+//             newArray.push(element);
+//         }
+//     });
+
+//     //console.log('New array lower: ', newArray);
+//     return newArray;
+// }
 
 let higher = getHigher(courgette);
 let lower = getLower(courgette);
