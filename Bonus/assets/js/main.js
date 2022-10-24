@@ -28,6 +28,8 @@ const users = [
     }
 ];
 
+// ##TENTATIVO 1
+
 //let newUsers = [];
 
 // users.forEach((element, index) => {
@@ -44,11 +46,10 @@ const users = [
 
 //console.log(newUsers);
 
+
+// ##TENTATIVO 2
 let yesDrivers = users.filter(element => element.age >= 18);
 let noDrivers = users.filter(element => element.age < 18);
 
 yesDrivers.forEach(element => console.log(`${element.name} ${element.surname} può guidare`));
 noDrivers.forEach(element => console.log(`${element.name} ${element.surname} non può ancora guidare`));
-
-//console.log(yesDrivers);
-//console.log(noDrivers);
