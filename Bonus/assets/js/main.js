@@ -28,19 +28,24 @@ const users = [
     }
 ];
 
-let newUsers = [];
+//let newUsers = [];
 
+// users.forEach((element, index) => {
 
-users.forEach((element, index) => {
+//     if (users[index].age >= 18) {
+//         newMarkup = `${users[index].name} ${users[index].surname} può guidare`;
+//         newUsers.push(newMarkup);
+//     } else {
+//         newMarkup = `${users[index].name} ${users[index].surname} non può ancora guidare`;
+//         newUsers.push(newMarkup);
+//     }
+// }
+// );
 
-    if (users[index].age >= 18) {
-        newMarkup = `${users[index].name} ${users[index].surname} può guidare`;
-        newUsers.push(newMarkup);
-    } else {
-        newMarkup = `${users[index].name} ${users[index].surname} non può ancora guidare`;
-        newUsers.push(newMarkup);
-    }
-}
-);
+//console.log(newUsers);
 
-console.log(newUsers);
+let yesDrivers = users.filter(element => element.age >= 18);
+let noDrivers = users.filter(element => element.age < 18);
+
+console.log(yesDrivers);
+console.log(noDrivers);
